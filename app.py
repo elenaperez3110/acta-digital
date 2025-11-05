@@ -17,3 +17,13 @@ with st.form("acta_form"):
             "asistentes": [a for a in asistentes.splitlines() if a.strip()],
             "acuerdos": acuerdos
         })
+
+import streamlit as st
+import hashlib, time, json
+
+st.title("Prueba de imports")
+st.write("Streamlit OK ✅")
+st.write("hash de 'hola':", hashlib.sha256(b"hola").hexdigest())
+st.write("Epoch time:", int(time.time()))
+st.json({"clave": "valor"})
+
